@@ -20,7 +20,7 @@ class UploadFile
     {
         $this->err = $_FILES['file']['error'];
         if ($this->err > 0) {
-            $res["msg"] = '上传失败' . $this->err;
+            $res["msg"] = '没有上传文件' . $this->err;
             echo json_encode($res, JSON_UNESCAPED_UNICODE);
             exit;
         }
