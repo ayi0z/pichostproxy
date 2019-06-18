@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>图床代理测试页面</title>
+</head>
+
+<body>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <div><span>文件名：</span><input type="file" name="file"></div>
+        <div><span>图床：</span>
+            <input type="checkbox" name="pichost" value="local" id="local" /><label for="local">本地</label>
+            <input type="checkbox" name="pichost" value="smms" id="smms" /><label for="smms">smms</label>
+            <input type="checkbox" name="pichost" value="sina" id="sina" /><label for="sina">新浪微博</label>
+            <input type="checkbox" name="pichost" value="qiniu" id="qiniu" /><label for="qiniu">七牛</label>
+        </div>
+        <input type="submit" name="submit" value="提交">
+    </form>
+</body>
+
+</html>
