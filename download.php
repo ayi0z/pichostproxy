@@ -29,9 +29,11 @@ class Download
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);  // 解决301错误
             $curl_data = curl_exec($curl);
             $curl_err = curl_errno($curl);
+            var_dump($curl_err);
             if ($curl_err) {
                 throw new Exception($curl_err);
             }
+            var_dump($curl_data);
             echo $curl_data;
         } catch (Exception $e) {
             $res["msg"] = ' 图片读取失败:' . $e->getMessage();
