@@ -21,7 +21,7 @@ class xiangudu implements IUploader
             $res["data"] = json_decode($curl_info, JSON_UNESCAPED_UNICODE);
             $res["data"]['url_thumb'] = $res["data"]['url'];
             $res["data"]['url']= $this->referer . 'large/' . $res["data"]['pid'] . '.jpg';
-            echo json_encode($res, JSON_UNESCAPED_UNICODE); // 返回数据，json格式
+            echo json_encode($res, JSON_UNESCAPED_UNICODE);
         }
     }
 

@@ -19,7 +19,7 @@ class uploadcc implements IUploader
 
             $res["msg"] = 'ok';
             $res["data"] = json_decode($curl_info, JSON_UNESCAPED_UNICODE);
-            echo json_encode($res, JSON_UNESCAPED_UNICODE); // 返回数据，json格式
+            echo json_encode($res, JSON_UNESCAPED_UNICODE);
         }
     }
 

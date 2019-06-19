@@ -3,23 +3,25 @@
 namespace picp\upload;
 class local implements IUploader
 {
-    private $tmpPath = './tmp/';
+    private $tmpPath = 'tmp/';
     public function __construct(){
-         $this->tmpPath = './tmp/'. date("Y-m-d") . '/';
+         $this->tmpPath = 'tmp/'. date("Y-m-d") . '/';
     }
 
     public function upload($file)
     {
         $go = file_exists($this->tmpPath);
         if (!$go) {
-            $go = mkdir($this->tmpPath);
+            $go = mkdir($this->tmpPath, 0777, true);
         }
 
         if ($go) {
             $targetname = $this->_new_file_name($file);
             $go = move_uploaded_file($file->tmp_name, $targetname);
-            if ($go) {
-                echo "文件存储在: " . $targetname;
+            if ($go){
+                $res["msg"] = 'ok';
+                $res["data"] = array('url'=>$_SERVER['HTTP_HOST'] . '/' . $targetname);
+                echo json_encode($res, JSON_UNESCAPED_UNICODE);
             }
         }
     }
