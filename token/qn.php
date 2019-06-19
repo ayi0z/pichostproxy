@@ -13,7 +13,7 @@
             <?php 
                 require __DIR__ . '/qiniu.php';
                 use picp\token\qiniu;
-                $qn = new qiniu('XA6XHfi2kksVbVPCxOLRK3WDtCsSPrrpTL3YWGEJ', 'q8hV3pcZyPE_kh2BK7O-5JlfZJVO71VEOE_bQNOM');
+                $qn = new qiniu('', '');
                 $token = $qn->uploadToken('test_pichost');
             ?>
         <input name="token" type="hidden" value="<?php echo $token ?>">
