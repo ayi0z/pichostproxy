@@ -2,9 +2,8 @@
 
 namespace picp;
 
-// header("content-type:image/jpeg;charset=utf-8");
+header("content-type:image/jpeg;charset=utf-8");
 require_once __DIR__ . '/loader.php';
-var_dump($_GET['url']);
 if(isset($_GET['url'])){
     $url = $_GET['url'];
     $download = new Download();
@@ -19,7 +18,6 @@ class Download
 {
     public function download($url)
     {
-        var_dump($url);
         $curl = curl_init();
         try {
             curl_setopt($curl, CURLOPT_URL, $url);
@@ -31,11 +29,9 @@ class Download
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);  // 解决301错误
             $curl_data = curl_exec($curl);
             $curl_err = curl_errno($curl);
-            var_dump($curl_err);
             if ($curl_err) {
                 throw new Exception($curl_err);
             }
-            var_dump($curl_data);
             echo $curl_data;
         } catch (Exception $e) {
             $res["msg"] = ' 图片读取失败:' . $e->getMessage();
