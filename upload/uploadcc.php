@@ -2,11 +2,11 @@
 
 namespace picp\upload;
 
-class smms implements IUploader
+class uploadcc implements IUploader
 {
-    private $url = 'https://sm.ms/api/upload';
-    private $referer = 'https://sm.ms/';
-    private $field = 'smfile';
+    private $url = 'https://upload.cc/image_upload';
+    private $referer = 'https://upload.cc/';
+    private $field = 'uploaded_file';
     protected $allowExts = array('git', 'png', 'jpg', 'jpeg');
     protected $maxSize = 5 * 1024 * 1024;   // 5M
 

@@ -9,10 +9,10 @@
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <div><span>文件名：</span><input type="file" name="file"></div>
         <div><span>图床：</span>
-            <input type="checkbox" name="pichost" value="local" id="local" /><label for="local">本地</label>
-            <input type="checkbox" name="pichost" value="smms" id="smms" /><label for="smms">smms</label>
-            <input type="checkbox" name="pichost" value="sina" id="sina" /><label for="sina">新浪微博</label>
-            <input type="checkbox" name="pichost" value="qiniu" id="qiniu" /><label for="qiniu">七牛</label>
+            <input type="radio" name="pichost" value="local" id="local" /><label for="local">本地</label>
+            <input type="radio" name="pichost" value="smms" id="smms" /><label for="smms">smms</label>
+            <input type="radio" name="pichost" value="xiangudu" id="xiangudu" /><label for="xiangudu">鲜咕嘟</label>
+            <input type="radio" name="pichost" value="uploadcc" id="uploadcc" /><label for="uploadcc">upload.cc</label>
         </div>
         <input type="submit" name="submit" value="提交">
     </form>

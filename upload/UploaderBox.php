@@ -25,3 +25,5 @@ class UploaderBox
 
 UploaderBox::set('local', new local());
 UploaderBox::set('smms', new smms());
+UploaderBox::set('xiangudu', new xiangudu());
+UploaderBox::set('uploadcc', new uploadcc());

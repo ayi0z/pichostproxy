@@ -30,7 +30,7 @@ class Download
             $curl_data = curl_exec($curl);
             $curl_err = curl_errno($curl);
             if ($curl_err) {
-                throw new Exception($curl_err);
+                throw new \Exception($curl_err);
             }
             echo $curl_data;
         } catch (Exception $e) {
