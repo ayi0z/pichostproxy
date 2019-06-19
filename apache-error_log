@@ -1,2 +1,0 @@
-[Wed Jun 19 06:52:02.522888 2019] [php7:error] [pid 7131] [client 127.0.0.1:59772] script '/Users/dongqing/Sites/freelancer/pichostproxy/index.php' not found or unable to stat, referer: http://picp.com/
-[Wed Jun 19 06:52:04.302298 2019] [php7:error] [pid 7131] [client 127.0.0.1:59772] script '/Users/dongqing/Sites/freelancer/pichostproxy/index.php' not found or unable to stat, referer: http://picp.com/
