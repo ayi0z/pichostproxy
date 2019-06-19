@@ -2,9 +2,9 @@
 
 namespace picp;
 
-header("content-type:image/jpeg;charset=utf-8");
+// header("content-type:image/jpeg;charset=utf-8");
 require_once __DIR__ . '/loader.php';
-
+var_dump($_GET['url']);
 if(isset($_GET['url'])){
     $url = $_GET['url'];
     $download = new Download();
@@ -19,6 +19,7 @@ class Download
 {
     public function download($url)
     {
+        var_dump($url);
         $curl = curl_init();
         try {
             curl_setopt($curl, CURLOPT_URL, $url);
@@ -33,7 +34,7 @@ class Download
             }
             echo $curl_data;
         } catch (Exception $e) {
-            $res["msg"] = '图片读取失败:' . $e->getMessage();
+            $res["msg"] = ' 图片读取失败:' . $e->getMessage();
             echo json_encode($res, JSON_UNESCAPED_UNICODE);
             die();
         } finally {
