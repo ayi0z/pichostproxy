@@ -64,7 +64,7 @@ class Upload
     {
         if (
             !in_array($this->file->type, $this->allowTypes)
-            || !in_array($this->file->ext, $this->allowExts)
+            || !in_array(strtolower($this->file->ext), $this->allowExts)
             || $this->file->size > $this->maxSize
         ) {
             $res["msg"] = '非法的图片格式';
