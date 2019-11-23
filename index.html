@@ -3,19 +3,49 @@
 <head>
     <meta charset="utf-8">
     <title>图床代理测试页面</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1523885_zm7xgl61z4.css" />
+    <link rel="stylesheet" href="css/a.css" />
 </head>
 
 <body>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <div><span>文件名：</span><input type="file" name="file"></div>
-        <div><span>图床：</span>
-            <input type="radio" name="pichost" value="local" id="local" /><label for="local">本地</label>
-            <input type="radio" name="pichost" value="smms" id="smms" /><label for="smms">smms</label>
-            <input type="radio" name="pichost" value="xiangudu" id="xiangudu" /><label for="xiangudu">鲜咕嘟</label>
-            <input type="radio" name="pichost" value="uploadcc" id="uploadcc" /><label for="uploadcc">upload.cc</label>
+    <div class="upload-panel">
+        <div id="upload-drop" class="upload-drop">
+            <div class="upload-btn">
+                <div id="upload-icon" class="upload-icon">
+                    <i class="iconfont icon-iconfontzhizuobiaozhun0263"></i>
+                    <div id="upload-preview" class="upload-preview">
+                        <img id="upload-preview-img" src="https://upload.cc/favicon.ico" alt="上传图片预览">
+                        <div id="upload-delete" class="upload-delete">X</div>
+                    </div>
+                </div>
+                <div class="upload-tips">
+                    <small>拖拽图片到这里上传</small>
+                    <small>或点击选择图片</small>
+                </div>
+                <input style="display: none;" id="uploadfile" type="file" name="file" accept="image/*">
+            </div>
         </div>
-        <input type="submit" name="submit" value="提交">
-    </form>
+        <div class="upload-action">
+            <div class="upload-cloud">
+                <div class="upload-cloud-up" cname="smms" style="background-image: url(/img/smms.ico);">
+                    <span>smms</span>
+                </div>
+                <div class="upload-cloud-up" cname="xiangudu" style="display: none;"
+                    style="background-image: url(/img/xianggudu.ico);">
+                    <span>鲜咕嘟</span></div>
+                <div class="upload-cloud-up" cname="uploadcc"
+                    style="background-image: url(/img/uploadcc.ico);">
+                    <span>upload.cc</span></div>
+                <div class="upload-cloud-up" cname="local" style="background-image: url(/img/picp.ico);"><span>picp</span></div>
+            </div>
+            <p class="upload-tips"></p>
+        </div>
+        <div class="upload-action" style="padding: 5px; min-height: 100px;">
+            <pre class="upload-tips" style="overflow: auto;" id="upload-result">
+选择要上传的图片，点击图床即可上传。
+            </pre>
+        </div>
+    </div>
 </body>
-
+<script src="js/a.js"></script>
 </html>

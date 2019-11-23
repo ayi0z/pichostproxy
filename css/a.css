@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #e2e6fb;
+}
+.upload-panel {
+    background-color: #f2f3ff;
+    border-radius: 3px;
+    box-shadow: 0 0px 5px #a9bfdc;
+    display: block;
+    min-width: 400px;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+.upload-panel .upload-drop {
+    margin: 0;
+    height: 300px;
+    box-shadow: 0 0 6px #a9bfdc;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.upload-panel .upload-drop .upload-btn {
+    position: relative;
+    top:40%;
+    transform:translate(0,-50%) ;
+    height: 100px;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+    margin: auto;
+    border: dashed 1px #d8d8d8;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon i {
+    line-height: 100px;
+    font-size: 50px;
+    color: #96a1bb;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon:hover{
+    border: dashed 1px #57575e;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon:hover i{
+    color: #57575e;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon .upload-preview {
+    width: 100px;
+    height: 100px;
+    margin-top: -100%;
+    position: relative;
+    margin-left: -110%;
+    transform: scale(1.1);
+    border-radius: 3px;
+    box-shadow: 0 0 3px #57575e;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon .upload-preview-scale{
+    transform: scale(3);
+    margin-top: -80%;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon .upload-preview img{
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon .upload-preview .upload-delete{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    line-height: 20px;
+    background-color: #cde0ff87;
+    border-radius: 3px;
+    opacity: 0.8;
+    color: #ff0e0e;
+}
+
+.upload-panel .upload-drop .upload-btn .upload-icon-active{
+    overflow: initial;
+}
+.upload-panel .upload-drop .upload-btn .upload-icon-active .upload-preview {
+    margin-left: 0px;
+}
+
+.upload-panel .upload-drop .upload-tips{
+    margin-top: 10px;
+    text-align: center;
+    color: #96a1bb;
+}
+.upload-panel .upload-drop .upload-tips small{
+    display: block;
+}
+.upload-panel .upload-action{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0px 1px 1px #bec8dc;
+}
+.upload-panel .upload-action .upload-cloud{
+    padding: 10px 5px 2px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.upload-panel .upload-action .upload-tips{
+    font-size: 10px;
+    color: #96a1bb;
+    padding: 3px 15px;
+}
+.upload-cloud-up {
+    margin: 5px;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 5px;
+    background-size: 20px;
+    color: rgb(77, 90, 107);
+    font-size: 10pt;
+    height: 40px;
+}
+
+.upload-cloud-up:hover{
+    box-shadow: 0 0 3px #6676d0;
+}
+.upload-cloud-up span{
+    display: table-cell;
+    vertical-align: bottom;
+    height: 40px;
+    color: #96a1bb;
+}
+.upload-cloud-up:hover span{
+    color: #76767b;
+}

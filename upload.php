@@ -18,9 +18,15 @@ class UploadFile
 
     public function __construct()
     {
+        $fileError = array(
+            '1' => '图片大小超过 php.ini 中 upload_max_filesize 选项限制的值', 
+            '2' => '图片大小超过 HTML 表单中 MAX_FILE_SIZE 选项指定的值', 
+            '3' => '图片文件缺损', 
+            '4' => '图片未被上传', 
+            '5' => '图片大小为0');
         $this->err = $_FILES['file']['error'];
         if ($this->err > 0) {
-            $res["msg"] = '没有上传文件' . $this->err;
+            $res["msg"] = $fileError[$this->err];
             echo json_encode($res, JSON_UNESCAPED_UNICODE);
             exit;
         }
