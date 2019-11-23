@@ -17,7 +17,7 @@ window.onload = () => {
         e.stopPropagation()
 
         FILE = e.dataTransfer.files[0]
-        if(FILE){
+        if (FILE) {
             showPreview()
         }
     })

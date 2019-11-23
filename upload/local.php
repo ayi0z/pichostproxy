@@ -24,6 +24,12 @@ class local implements IUploader
                 echo json_encode($res, JSON_UNESCAPED_UNICODE);
             }
         }
+
+        if(!$go){
+            $res["msg"] = 'false';
+            $res["data"] = '无法创建文件/文件夹';
+            echo json_encode($res, JSON_UNESCAPED_UNICODE);
+        }
     }
 
     protected function _new_file_name($file)
