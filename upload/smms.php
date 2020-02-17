@@ -4,7 +4,7 @@ namespace picp\upload;
 
 class smms implements IUploader
 {
-    private $url = 'https://sm.ms/api/upload';
+    private $url = 'https://sm.ms/api/v2/upload?inajax=1';
     private $referer = 'https://sm.ms/';
     private $field = 'smfile';
     protected $allowExts = array('git', 'png', 'jpg', 'jpeg');
