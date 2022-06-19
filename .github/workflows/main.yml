@@ -1,0 +1,32 @@
+name: CI - Deploy to Tencent CVM ayoz-01
+
+on:
+  push:
+    branches: [ master ]
+# pull_request:
+#   branches: [ master ]
+
+# Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      # Runs a single command using the runners shell
+      - name: deploy to Tencent CVM ayoz-01
+        uses: easingthemes/ssh-deploy@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-avzr --delete"
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.TARGET }}
