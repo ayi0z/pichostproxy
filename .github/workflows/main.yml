@@ -30,3 +30,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.TARGET }}
+          EXCLUDE: "/.git/, /.github/, /.DS_Store, /.gitignore"
